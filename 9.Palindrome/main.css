@@ -124,15 +124,67 @@ a,button{
     color: var(--white);
     border: 1px solid var(--btn-bg-color);
     padding: 1rem 2rem;
+    cursor: pointer;
+    transition: .3s ease;
 }
 .button:hover {
     background-color: var(--white);
     color:  var(--btn-bg-color);
     padding: 1rem 2rem;
 }
-
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
 /*  */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
 .btn-group button {
     font-size: 1.6rem;
+}
+
+.p-5{
+    padding:5rem;
+}
+.my-3{
+    margin: 3rem 0;
+}
+.container {
+    width: 120rem;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center
+}
+.shadow-lg.p-5.my-3 {
+    width: 80rem;
+    margin: 3rem auto;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input#input {
+    border: 1px solid var(--btn-bg-color);
+    padding: 1rem 2rem;
+}
+input#input:focus {
+    outline: none;
+}
+
+h3#displayPalindrome {
+    margin-top: 3rem;
+}
+.shadow-lg.p-5.my-3 {
+    width: 80rem;
+    margin: 3rem auto;
+    height: 200px;
 }
