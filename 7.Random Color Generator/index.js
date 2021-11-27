@@ -1,14 +1,18 @@
 //Define UI Elements
-const btn = document.getElementsByClassName('btn-primary')[0];
-const randColor = document.getElementById('randColor');
+const modalBtn = document.querySelector('.btn-primary');
+const closeBtn = document.querySelector('.close');
+const modal = document.getElementById('modal');
 
 //Define Event listener
-btn.addEventListener('click', generarateColor);
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', closeModal)
 
 //Define Functions
-function generarateColor(e) {
-    const rand =Math.random().toString(16).substring(2, 8);
-    randColor.innerHTML =  `#${rand}`;
-    document.querySelector('body').style.backgroundColor = `#${rand}`;
+function openModal(e) {
+    modal.style.display = 'block';
 }
-generarateColor();
+
+function closeModal(e) {
+    modal.style.display = 'none';
+}
