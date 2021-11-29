@@ -1,16 +1,32 @@
-(function (){
-    const toggle = document.getElementById('toggleDark')
-    const body = document.getElementsByTagName('body')[0]
-    
-    toggle.addEventListener('click', function (e) {
-        this.classList.toggle('bi-moon')
+//Define UI Elements
+const toggle = document.getElementById('toggleDark')
+let darkMode = localStorage.getItem("darkMode");
 
-        if ( this.classList.contains('bi-moon') ) {
-            body.classList.add('dark-theme')
-        }else {
-            body.classList.remove('dark-theme')
-        }
+//Define Functions
+const enableDarkMode = () => {
+    document.body.classList.add('dark-theme');
+    localStorage.setItem("darkMode", "enabled");
+};
 
-    })
+const disableDarkMode = () => {
+    document.body.classList.remove('dark-theme');
+    localStorage.setItem("darkMode", "disable");
+};
 
-})()
+// Save DarkMode History
+if (darkMode === "enabled") {
+    toggle.classList.add('bi-moon')
+    enableDarkMode();
+}
+
+//Define Event listener
+toggle.addEventListener("click", function (e) {
+    let darkMode = localStorage.getItem("darkMode");
+    if (darkMode !== "enabled") {
+        this.classList.add('bi-moon');
+        enableDarkMode();
+    } else {
+        this.classList.remove('bi-moon');
+        disableDarkMode();
+    }
+})
