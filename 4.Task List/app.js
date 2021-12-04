@@ -7,47 +7,101 @@ const clearBtn = document.getElementById('clear_task_btn');
 const taskFilter = document.getElementById('task_filter');
 
 //Define Event listener
+form.addEventListener('submit', addTask)
+tasksUl.addEventListener('click', removeTask)
+clearBtn.addEventListener('click', clearTask)
+taskFilter.addEventListener('input', filterTask)
+document.addEventListener('DOMContentLoaded', getTask)
 
-form.addEventListener('submit', function (e) {
+//Define Function
+function addTask(e) {
     e.preventDefault();
     const li = document.createElement('li');
     li.appendChild(document.createTextNode(taskInput.value));
     const link = document.createElement('a');
     link.setAttribute('href', 'javascript:void(0)');
-    link.appendChild(document.createTextNode('x'));
+    link.appendChild(document.createTextNode('X'))
     li.appendChild(link);
-    taskInput.value = '';
     tasksUl.appendChild(li);
-});
+    savaDataLocalStorage(taskInput.value)
+    taskInput.value = '';
+}
 
-tasksUl.addEventListener('click', function (e) {
+function removeTask(e) {
     if (e.target.hasAttribute('href')) {
-        const element = e.target.parentElement;
-        if (confirm('Are you sure you want to delete this task')) {
-            element.remove();
+        if (confirm('Are you sure you want to remove')) {
+            e.target.parentElement.remove();
+            removeFormLS(e.target.parentElement);
         }
     }
-});
+}
 
-clearBtn.addEventListener('click', function (e) {
-    if (tasksUl.childElementCount) {
-        if (confirm('Are you sure you want to delete this task')) {
-            tasksUl.innerHTML = '';
-            // while (tasksUl.firstElementChild) {
-            //     tasksUl.removeChild(tasksUl.firstElementChild)
-            // }
-        }
-    }
-})
+function clearTask(e) {
+    //tasksUl.innerHTML = '';
+    while (tasksUl.firstElementChild) {
+        //console.log(tasksUl.firstElementChild);
+        tasksUl.removeChild(tasksUl.firstElementChild);
+    };
+    localStorage.clear();
+}
 
-taskFilter.addEventListener('keyup', function (e) {
-    const text = e.target.value.toLocaleLowerCase();
-    const items = tasksUl.children;
-    [...items].forEach(li => {
-        if (li.textContent.toLocaleLowerCase().indexOf(text) != -1) {
-            li.style.display = 'block';
+function filterTask(e) {
+    const input = e.target.value.toLowerCase();
+    [...tasksUl.children].forEach(liElement => {
+        if (liElement.textContent.toLowerCase().includes(input)) {
+            liElement.style.display = 'block';
         } else {
-            li.style.display = 'none';
+            liElement.style.display = 'none';
+        }
+    });
+}
+
+function savaDataLocalStorage(newTask) {
+    let tasks;
+    if (localStorage.getItem('task') == null) {
+        tasks = []
+    } else {
+        tasks = JSON.parse(localStorage.getItem('task'));
+    }
+    tasks.push({
+        task: newTask
+    });
+    localStorage.setItem('task', JSON.stringify(tasks))
+};
+
+function getTask() {
+    let tasks = [];
+    if (localStorage.getItem('task') == null) {
+        tasks = []
+    } else {
+        tasks = JSON.parse(localStorage.getItem('task'));
+    }
+
+    tasks.forEach(task => {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(task.task));
+        const link = document.createElement('a');
+        link.setAttribute('href', 'javascript:void(0)');
+        link.appendChild(document.createTextNode('X'))
+        li.appendChild(link);
+        tasksUl.appendChild(li);
+    })
+}
+
+function removeFormLS(taskItem) {
+    let tasks;
+    if (localStorage.getItem('task') == null) {
+        tasks = [];
+    }else{
+        tasks = JSON.parse(localStorage.getItem('task'));
+    }
+    const li = taskItem;
+    li.removeChild(li.lastChild);
+    tasks.map((task, index) => {
+        if (li.textContent.trim() === task.task) {
+            tasks.splice(index, 1);
         }
     })
-})
+
+    localStorage.setItem('task', JSON.stringify(tasks));
+}
