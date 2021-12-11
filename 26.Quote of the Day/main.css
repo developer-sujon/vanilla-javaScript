@@ -1,0 +1,255 @@
+/*
+  Theme Name: Multipurpose HTML Template
+  Author: Mohammad Sujon
+  Support: mohammad.sujon@outlook.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index 
+-----------------------------------
+1. Theme Variables CSS
+2. Theme default css
+
+*/
+
+/*  Google Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;700&display=swap');
+
+/* 1. Theme Variables CSS */
+:root {
+    --body-color: #F5F8FF;
+    --text-color: #2B3442;
+    --text-color-alt: #4B6A9B;
+    --btn-bg-color: #0477FE;
+    --container: #FEFEFE;
+    --body-font: 'Exo', sans-serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+    --font-size: 14px;
+    --white: #fff;
+    --success: #292;
+    --error: #e00;
+    --primary: #008cba;
+}
+
+/*  Variable For Dark Theme  */
+body.dark-theme {
+    --body-color: #141C2F;
+    --text-color: #fff;
+    --text-color-alt: #fff;
+    --btn-bg-color: #0477FE;
+    --container: #1F2A48;
+}
+
+/* 2. Theme default css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-light);
+    position: relative;
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.3;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 3.5rem;
+}
+
+h3 {
+	font-size: 2.8rem;
+}
+
+h4 {
+	font-size: 2.2rem;
+}
+
+h5 {
+	font-size: 1.8rem;
+}
+
+h6 {
+	font-size: 1.6rem;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+.p-5{
+    padding:5rem;
+}
+.my-1 {
+    margin: 1rem 0;
+}
+.my-2 {
+    margin: 2rem 0;
+}
+.my-3{
+    margin: 3rem 0;
+}
+.my-5{
+    margin: 5rem 0;
+}
+.text-center{
+    text-align: center
+}
+.text-primary {
+    color: var(--primary);
+}
+
+a,button{
+    text-decoration: none;
+    display: inline-block;;
+}
+.button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--primary);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.button:hover {
+    background-color: var(--white);
+    color:  var(--primary);
+    padding: 1rem 2rem;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.feild-group input.input-feild,
+.feild-group select.input-feild {
+    border: 1px solid var(--primary);
+    padding: 1rem 2rem;
+    width: 100%;
+}
+input.input-feild:focus {
+    outline: none;
+}
+.feild-group.success input.input-feild,
+.feild-group.success input.input-feild:focus {
+    border: 1px solid var(--success);
+}
+.feild-group.fail input.input-feild,
+.feild-group.fail input.input-feild:focus {
+    border: 1px solid var(--error);
+}
+.feild-group.success .icon-box i{
+    color: var(--success)
+}
+.feild-group.fail .icon-box i{
+    color: var(--error)
+}
+.feild-group{
+    position: relative;
+}
+.feild-group .icon-box i {
+    position: absolute;
+    top: 1rem;
+    right: .5rem;
+    visibility: hidden;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+/*******/
+.container {
+    width: 120rem;
+    margin: auto;
+}
+.wrapper {
+    width: 605px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+    margin: 3rem auto 0;
+}
+.buttons .features {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.features ul {
+    display: flex;
+}
+.features ul li:first-child {
+    margin-left: 0;
+}
+.features ul li {
+    margin: 0 5px;
+    height: 47px;
+    width: 47px;
+    display: flex;
+    cursor: pointer;
+    color: var(--primary);
+    list-style: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary);
+    transition: all .3s ease;
+}
+button.loading {
+    opacity: .7;
+    pointer-events: none;
+}
