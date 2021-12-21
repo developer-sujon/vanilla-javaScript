@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#loginForm {
+    background: #001330;
+    padding: 0 30px;
+    overflow: hidden;
+    /* height: 100vh; */
+}
+#loginForm img{
+    max-width: 100%;
+}
+.loginContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#loginForm .shapLeft {
+    flex: 0 0 auto;
+    width: 33.33%;
+}
+
+#loginForm .loginArea {
+    flex: 0 0 auto;
+    width: 33.33%;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+}
+
+#loginForm .shapRight {
+    flex: 0 0 auto;
+    width: 33.33%;
+}
+img.wh_left_01 {
+    width: 300px;
+    display: block;
+    position: relative;
+    left: 6%;
+}
+.pShap {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+img.wh_left_02{
+    width: 150px;
+    display: block;
+}
+img.wh_right_03 {
+    width: 200px;
+    z-index: 0;
+    display: block;
+    position: relative;
+    top: -98px;
+    opacity: 0.3;
+    left: 2%;
+}
+img.wh_left_04 {
+    width: 150px;
+    display: block;
+    position: relative;
+    left: 18%;
+    top: -197px;
+}
+.parentShap {
+    position: relative;
+}
+
+
+/* shapRight */
+
+
+.shapRight img {
+    display: block;
+}
+img.wh_right_01 {
+    position: relative;
+    width: 120px;
+    left: 53%;
+    top: 226px;
+}
+img.wh_right_02 {
+    position: relative;
+    width: 140px;
+    left: 34%;
+    top: 220px;
+    opacity: .4;
+}
+img.wh_left_03 {
+    position: relative;
+    width: 120px;
+    left: 69%;
+    top: 91px;
+}
+img.wh_right_04 {
+    position: relative;
+    width: 170px;
+    filter: brightness(5.5);
+    left: 56%;
+    margin-top: 95px;
+    opacity: .6;
+}
+#loginForm .loginArea img {
+    width: 160px;
+    height: 260px;
+}
+
+.inputContainer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: #00264D;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
+  .inputField{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+  
+  .inputField:focus {
+    border: 2px solid #00264D;
+  }
+
+  /* Animatin keyframes */
+
+
+  @keyframes Negativerotate{
+    to{
+        transform: rotate(-0deg);
+        -webkit-transform: rotate(-0deg);
+        -moz-transform: rotate(-0deg);
+        -ms-transform: rotate(-0deg);
+        -o-transform: rotate(-0deg);
+}
+    100%{
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+}
+}
+
+@keyframes rotate{
+    to{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+    100%{
+        transform: rotate(360deg);    ;
+        -webkit-transform: rotate(360de)    ;
+        -moz-transform: rotate(360de)    ;
+        -ms-transform: rotate(360de)    ;
+        -o-transform: rotate(360de)    ;
+}
+}
+
+
+/* shapRight */
+
+.animated img.wh_right_01 {
+    position: relative;
+    width: 120px;
+    left: 53%;
+    top: 226px;
+    animation: Negativerotate 4s linear infinite;
+    -webkit-animation: Negativerotate 14s linear infinite;
+    -webkit-filter: brightness(2.5);
+}
+.animated img.wh_right_02 {
+    animation: rotate 4s linear infinite;
+    -webkit-animation: rotate 9s linear infinite;
+}
+.animated img.wh_left_03 {
+    animation: Negativerotate 4s linear infinite;
+    -webkit-animation: Negativerotate 6.9s linear infinite;
+}
+.animated img.wh_right_04 {
+    animation: rotate 4s linear infinite;
+    -webkit-animation: rotate 4s linear infinite;
+}
+
+/* shapLeft */
+
+.animated img.wh_left_01 {
+    animation: rotate 5.5s linear infinite;
+    -webkit-animation: rotate 5.5s linear infinite;
+}
+.animated img.wh_left_02{
+    animation: rotate 5.5s linear infinite;
+    -webkit-animation: rotate 5.5s linear infinite;
+}
+.animated img.wh_right_03 {
+    left: 2%;
+    animation: Negativerotate 0.5s linear infinite;
+    -webkit-animation: Negativerotate 0.5s linear infinite;
+}
+.animated img.wh_left_04 {
+    animation: rotate 4s linear infinite;
+    -webkit-animation: rotate 4s linear infinite;
+}
+
+
+.password {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.password div {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.inputGroup {
+    padding: 50px 40px;
+    background: #88919E;
+    border-radius: 14px;
+    box-shadow: 5px 5px 0px 0px #83868c, 10px 10px 0px 0px #0c426d00, 15px 15px 0px 0px #145e9200, 20px 20px 0px 0px #15314a00, 25px 25px 0px 0px #1a3f6f00, 5px 5px 6px 5px rgb(136 145 158 / 0%);
+    z-index: 999;
+    position: relative;
+}
+.inputGroup .rememberMe {
+    color: #294665;
+}
+.inputGroup label a {
+    text-decoration: none;
+    color: #294665;
+}
+label.rememberMe input {
+    margin-right: 5px;
+}
+.formBox {
+    position: relative;
+}
+button#classSubmit {
+    left: 15%;
+    top: 75%;
+    position: absolute;
+    z-index: 1;
+    background: #294665;
+    border-color: #294665;
+    color: #fff;
+    outline: 0;
+    width: 70%;
+    text-transform: uppercase;
+    height: 50px;
+    letter-spacing: 10px;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 6px 5px rgba(136,145,158,0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 6px 5px rgba(136,145,158,0);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+button.transion {
+    z-index: 9 !important;
+    top: 100% !important;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+

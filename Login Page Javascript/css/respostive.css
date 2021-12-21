@@ -1,0 +1,125 @@
+@media only screen and (max-width: 1400px) {
+    #loginForm .loginArea img {
+        width: 140px;
+        height: 190px;
+    }
+    #loginForm .loginArea {
+        padding-top: 35px;
+    }
+    
+    .shapRight {
+        top: -83px;
+        position: relative;
+    }
+    img.wh_left_01 {
+        width: 235px;
+    }
+  }
+
+  @media only screen and (max-width: 1140px) {
+    #loginForm .shapLeft {
+        width: 32.5%;
+    }
+    #loginForm .loginArea {
+        padding-top: 20px;
+    }
+    #loginForm .loginArea {
+        width: 35%;
+    }
+    #loginForm .shapRight {
+        width: 32.5%;
+    }
+  }
+
+  @media only screen and (max-width: 840px) {
+    img.wh_right_03 {
+        width: 155px;
+    }
+    
+    img.wh_left_02 {
+        width: 115px;
+        position: relative;
+        top: -15px;
+    }
+    
+    img.wh_left_04 {
+        width: 116px;
+        top: -181px;
+        left: 26%;
+    }
+    
+    img.wh_left_01 {
+        width: 200px;
+    }
+    #loginForm .shapLeft {
+        position: relative;
+        top: 103px;
+        left: -3%;
+    }
+
+
+    #loginForm .shapLeft {
+        position: relative;
+        top: 40px;
+        left: -3%;
+    }
+    
+    img.wh_right_02 {
+        width: 120px;
+        left: 20%;
+    }
+    
+    img.wh_right_01 {
+        width: 105px;
+    }
+    
+    img.wh_left_03 {
+        width: 100px;
+        top: 113px;
+    }
+    
+    img.wh_right_04 {
+        width: 150px;
+        top: 20px;
+    }
+    #loginForm .loginArea {
+        width: 46%;
+    }
+    #loginForm .shapLeft,
+    #loginForm .shapRight {
+        width: 27%;
+    }
+    img.wh_left_01 {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 460px) {
+    #loginForm .shapLeft {
+        width: 100%;
+        left: -18%;
+        position: fixed;
+    }
+    #loginForm .shapRight {
+        left: 65%;
+        position: fixed;
+        top: -142px;
+    }
+    #loginForm .loginArea {
+        z-index: 99;
+        opacity: 1;
+    }
+    #loginForm .loginArea {
+        z-index: 99;
+        opacity: 0.7;
+    } 
+    #loginForm .loginArea {
+        width: 90%;
+    }
+
+    #loginForm {
+        padding-left: 7px;
+    }
+}

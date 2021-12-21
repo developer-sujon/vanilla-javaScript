@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/respostive.css">
+</head>
+
+<body>
+    <div id="loginForm">
+        <div class="loginContainer">
+            <div class="shapLeft">
+                <div class="pShap">
+                    <img src="img/left/wh_left_01.png" alt="wh_left_01.png" class="wh_left_01">
+                </div>
+                <div class="parentShap">
+                    <img src="img/left/wh_left_02.png" alt="wh_left_02.png" class="wh_left_02">
+                    <img src="img/right/wh_right_03.png" alt="wh_right_03.png" class="wh_right_03">
+                    <img src="img/left/wh_left_04.png" alt="wh_left_04.png" class="wh_left_04">
+                </div>
+            </div>
+            <div class="loginArea">
+                <div class="loginAreaContainer">
+                    <img src="img/lock.png" alt="lock.png" class="lockImg">
+                    <div class="formBox">
+                        <form>
+                            <div class="inputGroup">
+                                <h1>Wibsas</h1>
+                                <div class="inputContainer">
+                                    <i class="fa fa-user icon"></i>
+                                    <input id="user" class="inputField" type="text" placeholder="Username"
+                                        name="usrnm" value="">
+                                </div>
+                                <div class="inputContainer">
+                                    <i class="fa fa-key icon"></i>
+                                    <input id="password" class="inputField" type="password" placeholder="Password"
+                                        name="psw" value="">
+                                </div>
+                                <div class="password">
+                                    <div><label class="rememberMe" for="remember"><input type="checkbox" name="remember"
+                                                id="remember">Remember Me</label></div>
+                                    <div><label><a href="soida%2bnaim.html">Forgotten Password</a></label></div>
+                                </div>
+                            </div>
+                            <div class="submitBtn">
+                                <button id="classSubmit" type="button">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="shapRight">
+                <img src="img/right/wh_right_01.png" alt="wh_right_01.png" class="wh_right_01">
+                <img src="img/right/wh_right_02.png" alt="wh_right_02.png" class="wh_right_02">
+                <img src="img/right/wh_right_03.png" alt="wh_left_03.png" class="wh_left_03">
+                <img src="img/right/wh_right_04.png" alt="wh_right_04.png" class="wh_right_04">
+            </div>
+
+            <div class="soundEffect">
+                <div class="soundUser">
+                    <audio id="soundUserElement">   
+                        <source src="script/username.mp3" />   
+                    </audio>
+                </div>
+                <div class="soundType">
+                    <audio id="soundTypeElement">
+                        <source src="script/type.mp3" />
+                    </audio>
+                </div>
+                <div class="soundPassword">
+                    <audio id="soundPasswordElement">
+                        <source src="script/password.mp3" />
+                    </audio>
+                </div>
+                <div class="soundSuccess">
+                    <audio id="soundSuccessElement">
+                        <source src="script/success.mp3" />
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
