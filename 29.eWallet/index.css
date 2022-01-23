@@ -1,0 +1,12 @@
+header {
+  color: white;
+  padding: 1rem 2rem;
+  min-height: 30vh;
+}
+header.dark {
+  background-color: #091830;
+}
+
+p {
+  font-size: 20px;
+}
